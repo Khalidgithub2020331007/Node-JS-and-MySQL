@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS school;
+
+USE school;
+
+CREATE TABLE IF NOT EXISTS students (
+  id INT,
+  rollno INT,
+  name VARCHAR(15),
+  email VARCHAR(15),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATE,
+  PRIMARY KEY (email)
+);
+
+INSERT INTO students (id, rollno, name, email)
+VALUES 
+  (11, 120, 'Rahim', 'rahim@gmail.com'),
+  (12, 121, 'Sawon', 'sawon@gmail.com'),
+  (13, 122, 'Siam', 'siam@gmail.com'),
+  (14, 123, 'Kazi', 'kazi@gmail.com'),
+  (15, 124, 'Sourov', 'sourov@gmail.com'),
+  (16, 125, 'Akash', 'akash@gmail.com'),
+  (17, 126, 'xyz', 'xyz@gmail.com'),
+  (18, 127, 'Noyon Raja', 'noyonraja@gmail.com');
+
+SELECT * FROM students;
