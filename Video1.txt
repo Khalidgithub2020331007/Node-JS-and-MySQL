@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS students (
   id INT,
   rollno INT,
   name VARCHAR(15),
-  email VARCHAR(15),
+  email VARCHAR(35),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at DATE,
   PRIMARY KEY (email)
