@@ -6,3 +6,5 @@ Here I will upload those code, which I practiced during learning from this playl
 
 Before Run this code you have to follow this code in VSCode:
 npm install express
+# Command
+    npm install express nodemon mysql
