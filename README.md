@@ -41,4 +41,27 @@ npm install express
     Alter table School drop column students
 # Change Table Name
     RENAME TABLE old_table TO new_table;
+# Self Join
+```
+    -- Find the supervisor of "Bob"
+SELECT supervisor
+FROM emp_super
+WHERE employee = 'Bob';
 
+-- Find the supervisor of the supervisor of "Bob"
+SELECT es2.supervisor AS supervisor_of_supervisor
+FROM emp_super es1
+JOIN emp_super es2 ON es1.supervisor = es2.employee
+WHERE es1.employee = 'Bob';
+
+-- Find ALL the supervisors (direct and indirect) of "Bob"
+SELECT es2.supervisor AS supervisor
+FROM emp_super es1
+JOIN emp_super es2 ON es1.supervisor = es2.employee
+WHERE es1.employee = 'Bob'
+UNION
+SELECT supervisor
+FROM emp_super
+WHERE employee = 'Bob';
+
+```
