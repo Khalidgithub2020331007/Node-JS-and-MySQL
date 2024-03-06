@@ -39,3 +39,6 @@ npm install express
     );
 # Delete Column
     Alter table School drop column students
+# Change Table Name
+    RENAME TABLE old_table TO new_table;
+
