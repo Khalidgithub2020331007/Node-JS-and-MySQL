@@ -45,3 +45,9 @@ where course_id like '%3__';
 select distinct name
 from instructor
 where dept_name='music'
+
+
+# Answer -10
+select ID
+from takes
+where grade is null ;
