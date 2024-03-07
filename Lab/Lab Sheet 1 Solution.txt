@@ -1,3 +1,23 @@
+# Answer - 01
+SELECT name,dept_name
+from student;
+
+# Answer - 02
+select  *
+from classroom
+where  capacity<40 and building='watson';
+
+# Answer - 03
+select name
+from instructor
+where salary>=50000 and salary<=70000;
+
+# Answer- 04
+select ID
+from takes
+where (semester='fall' and year='2017') or ( semester='Spring' and year='2018');
+
+
 # Answer -05
 select *
 from department
@@ -6,7 +26,7 @@ where building='taylor' and budget=(select max(budget)
                                     where building='taylor');
 
 
-# Answer-06 
+# Answer-06
 select count(name),dept_name
 from student
 group by dept_name;
