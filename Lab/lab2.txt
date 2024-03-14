@@ -22,3 +22,5 @@ where Exists (
     select course_id
     From course_per_student as I
     where O.id=I.id and I.retakes>=2));
+
+
