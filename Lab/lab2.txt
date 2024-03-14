@@ -1,0 +1,24 @@
+# 1. Show the names of students who have got no F in any course
+   use university;
+select  id,name
+from student
+where id not in (select id
+                 from takes
+                 where grade='F');
+
+
+# 2. Show the names of students who have taken retakes
+select name
+from student
+    where id in (
+with  course_per_student as(
+    select id, course_id, count(*) as retakes
+    from takes
+    group by id, course_id
+)
+select id
+from course_per_student as O
+where Exists (
+    select course_id
+    From course_per_student as I
+    where O.id=I.id and I.retakes>=2));
