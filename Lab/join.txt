@@ -1,4 +1,3 @@
-
 # 1.cross join
   select *
 from  student,department;
@@ -38,3 +37,17 @@ from takes join section on takes.course_id = section.course_id and takes.sec_id 
 # Primary Key donot matter
 select dept_name,room_number,capacity
 from department join classroom on department.building=classroom.building;
+
+
+
+# Write a query that shws the names of students and their advisers names
+
+SELECT *
+from (student join advisor on student.ID = advisor.s_ID) join instructor on instructor.id=advisor.i_id;
+
+
+# only for student name and instructor name
+SELECT student.name, instructor.name
+from (student join advisor on student.ID = advisor.s_ID) join instructor on instructor.id=advisor.i_id;
+
+
